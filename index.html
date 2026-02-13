@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>הבית השני - פנסיון בוטיק לכלבים בתל אביב</title>
+    <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@300;400;700;900&family=Assistant:wght@300;400;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'brand-yellow': '#FFC857',
+                        'brand-orange': '#FF7A5C',
+                        'brand-dark': '#1A1A1B',
+                        'brand-bg': '#FAFAFA',
+                    },
+                    fontFamily: {
+                        sans: ['Heebo', 'Assistant', 'sans-serif'],
+                    }
+                }
+            }
+        }
+
+        function scrollGallery(direction) {
+            const container = document.getElementById('gallery-scroll');
+            const scrollAmount = container.clientWidth; 
+            container.scrollBy({
+                left: direction * scrollAmount,
+                behavior: 'smooth'
+            });
+        }
+    </script>
+    <style>
+        .hero-gradient {
+            background: linear-gradient(to top, rgba(0,0,0,0.7) 0%, rgba(0,0,0,0) 50%);
+        }
+        .no-scrollbar::-webkit-scrollbar { display: none; }
+        .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+        
+        .gallery-item {
+            flex: 0 0 calc(50% - 12px);
+        }
+        
+        @media (max-width: 768px) {
+            .gallery-item {
+                flex: 0 0 85%;
+            }
+        }
+    </style>
+</head>
+<body class="bg-brand-bg font-sans text-brand-dark overflow-x-hidden">
+
+    <header class="fixed top-0 w-full z-50 bg-white/80 backdrop-blur-md border-b border-gray-100">
+        <div class="container mx-auto px-6 py-3 flex justify-between items-center">
+            <div class="flex items-center gap-4">
+                <img src="david_logo.png" alt="לוגו" class="h-20 w-auto object-contain">
+                <div class="flex flex-col">
+                    <span class="text-xs font-medium text-brand-orange uppercase tracking-tighter">Boutique Dog Hotel</span>
+                </div>
+            </div>
+            <a href="https://wa.me/972528876330?text=היי,%20אשמח%20לפרטים%20על%20פנסיון%20הבית%20השני" class="hidden md:flex items-center gap-2 bg-[#25D366] text-white px-6 py-2.5 rounded-full font-black hover:scale-105 transition transform shadow-md">
+                <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.463 1.065 2.875 1.213 3.074.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/></svg>
+                <span>052-887-6330</span>
+            </a>
+        </div>
+    </header>
+
+    <section class="relative h-[90vh] flex items-end overflow-hidden pt-20">
+        <img src="david1.png" alt="הפנסיון שלנו" class="absolute inset-0 w-full h-full object-cover">
+        <div class="absolute inset-0 hero-gradient"></div>
+        <div class="container mx-auto px-6 relative z-10 pb-16 md:pb-24">
+            <div class="max-w-3xl">
+                <span class="inline-block bg-brand-yellow text-brand-dark px-4 py-1.5 rounded-full text-sm font-black mb-6 animate-bounce">
+                    כי גם לכלב שלך מגיע חופשה
+                </span>
+                <h1 class="text-5xl md:text-8xl font-black text-white leading-tight mb-6">
+                    פנסיון בוטיק ביתי <br>
+                    <span class="text-brand-yellow">בתל אביב</span>
+                </h1>
+                <p class="text-xl md:text-2xl text-white/90 font-light mb-8 max-w-xl">
+                   מקום פרטי שקט ואוהב, בלי כלובים ובלי גדרות  – רק בית, חופש וגינה ענקית!
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-24 bg-white">
+        <div class="container mx-auto px-6 text-center">
+            <div class="max-w-4xl mx-auto">
+                <p class="text-xl md:text-2xl text-gray-600 leading-relaxed mb-12">
+                    ב״הבית השני״ מתארחים <span class="text-brand-orange font-bold underline">עד 3 כלבים</span> בכל פעם, כדי להבטיח תשומת לב מלאה ויחס מותאם אישית. אצלנו הכלב הוא לא עבודה – הוא בן בית 🐶
+                </p>
+                <h2 class="text-3xl font-black mb-16">מה מצפה לו בחופשה?</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12 text-right">
+                    <div class="flex items-start gap-4">
+                        <span class="text-2xl">🚶‍♂️</span>
+                        <p class="text-lg">2 טיולים ארוכים ביום וביקור בגינות הכלבים באזור.</p>
+                    </div>
+                    <div class="flex items-start gap-4">
+                        <span class="text-2xl">🌳</span>
+                        <p class="text-lg">דירה ביתית בתל אביב עם גינה גדולה שמאפשרת מרחב ורוגע.</p>
+                    </div>
+                    <div class="flex items-start gap-4">
+                        <span class="text-2xl">📸</span>
+                        <p class="text-lg">עדכונים שוטפים והמון תמונות לבעלים בווטסאפ.</p>
+                    </div>
+                    <div class="flex items-start gap-4">
+                        <span class="text-2xl">🤝</span>
+                        <p class="text-lg">יחס אישי וליווי צמוד לאורך כל השהות לכל אורח.</p>
+                    </div>
+                    <div class="flex items-start gap-4">
+                        <span class="text-2xl">🧠</span>
+                        <p class="text-lg">ניסיון ויכולת הבנה עמוקה בצרכים המשתנים של כל כלב.</p>
+                    </div>
+                    <div class="flex items-start gap-4">
+                        <span class="text-2xl">🛁</span>
+                        <p class="text-lg">אופציה לתוספת מקלחת וטיפוח מותאמת אישית.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-24 bg-white">
+        <div class="container mx-auto px-6">
+            <h2 class="text-4xl font-black text-center mb-16 underline decoration-brand-yellow">מחירים ופינוקים</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-10 max-w-4xl mx-auto">
+                <div class="border-2 border-brand-dark p-10 rounded-[2rem] hover:bg-brand-yellow transition-colors group">
+                    <h3 class="text-3xl font-black mb-2">פנסיון</h3>
+                    <p class="text-lg mb-6">כולל לינה, טיולים, יחס אישי והמון פינוקים לאורך כל היום.</p>
+                    <ul class="space-y-2 font-bold">
+                        <li>• עד 3 כלבים בלבד</li>
+                        <li>• סביבה ללא כלובים</li>
+                    </ul>
+                </div>
+                <div class="border-2 border-brand-dark p-10 rounded-[2rem] hover:bg-brand-orange hover:text-white transition-colors group">
+                    <h3 class="text-3xl font-black mb-2">רחיצה וטיפוח</h3>
+                    <div class="text-1xl font-black mb-4">לשוהי הפנסיון בלבד - בתוספת תשלום</div>
+                    <p class="text-lg mb-6">טיפול ניקיון מתקדם שכולל רחיצה יסודית, הברשה וניחוח נהדר.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-24 bg-brand-bg">
+        <div class="container mx-auto px-6 text-center relative">
+            <h2 class="text-3xl font-black mb-12">— גלריה מהבית —</h2>
+            <div class="relative max-w-6xl mx-auto group">
+                <button onclick="scrollGallery(1)" class="absolute -right-4 top-1/2 -translate-y-1/2 z-20 bg-white/95 p-4 rounded-full shadow-2xl hover:bg-brand-orange hover:text-white transition-all hidden md:flex items-center justify-center">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M9 5l7 7-7 7"></path></svg>
+                </button>
+                <button onclick="scrollGallery(-1)" class="absolute -left-4 top-1/2 -translate-y-1/2 z-20 bg-white/95 p-4 rounded-full shadow-2xl hover:bg-brand-orange hover:text-white transition-all hidden md:flex items-center justify-center">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M15 19l-7-7 7-7"></path></svg>
+                </button>
+
+                <div id="gallery-scroll" class="flex gap-6 overflow-x-auto no-scrollbar snap-x snap-mandatory pb-6">
+                    <div class="gallery-item aspect-video rounded-3xl overflow-hidden shadow-lg snap-start snap-always flex-shrink-0 bg-gray-200">
+                        <img src="david1.png" alt="1" class="w-full h-full object-cover">
+                    </div>
+                    <div class="gallery-item aspect-video rounded-3xl overflow-hidden shadow-lg snap-start snap-always flex-shrink-0 bg-gray-200">
+                        <img src="david2.jpg" alt="2" class="w-full h-full object-cover">
+                    </div>
+                    <div class="gallery-item aspect-video rounded-3xl overflow-hidden shadow-lg snap-start snap-always flex-shrink-0 bg-gray-200">
+                        <img src="david3.jpg" alt="3" class="w-full h-full object-cover">
+                    </div>
+                    <div class="gallery-item aspect-video rounded-3xl overflow-hidden shadow-lg snap-start snap-always flex-shrink-0 bg-gray-200">
+                        <img src="david4.jpg" alt="4" class="w-full h-full object-cover">
+                    </div>
+                    <div class="gallery-item aspect-video rounded-3xl overflow-hidden shadow-lg snap-start snap-always flex-shrink-0 bg-gray-200">
+                        <img src="david5.jpg" alt="5" class="w-full h-full object-cover">
+                    </div>
+                    <div class="gallery-item aspect-video rounded-3xl overflow-hidden shadow-lg snap-start snap-always flex-shrink-0 bg-gray-200">
+                        <img src="david6.jpg" alt="6" class="w-full h-full object-cover">
+                    </div>
+                    <div class="gallery-item aspect-video rounded-3xl overflow-hidden shadow-lg snap-start snap-always flex-shrink-0 bg-gray-200">
+                        <img src="david7.jpg" alt="7" class="w-full h-full object-cover">
+                    </div>
+                    <div class="gallery-item aspect-video rounded-3xl overflow-hidden shadow-lg snap-start snap-always flex-shrink-0 bg-gray-200">
+                        <img src="david8.jpg" alt="8" class="w-full h-full object-cover">
+                    </div>
+                </div>
+            </div>
+            <p class="text-sm text-gray-400 mt-6 md:hidden">החליקו לצדדים לצפייה בגלריה</p>
+        </div>
+    </section>
+
+    <footer class="bg-brand-dark text-white py-16">
+        <div class="container mx-auto px-6 flex flex-col md:flex-row justify-between items-center gap-10">
+            <div class="text-center md:text-right">
+                <img src="david_logo.png" alt="לוגו" class="h-24 w-auto mx-auto md:mx-0 mb-4 brightness-0 invert">
+                <h3 class="text-2xl font-black mb-2">הבית השני</h3>
+                <p class="text-gray-400"> רח' צ'לנוב, תל אביב </p>
+                <p class="text-gray-400">052-887-6330</p>
+            </div>
+            <div class="flex flex-col items-center gap-4">
+                <p class="text-xl font-bold">מתי הכלב שלכם בא לחופשה?</p>
+                <a href="https://wa.me/972528876330?text=היי,%20אשמח%20לפרטים%20על%20פנסיון%20הבית%20השני" target="_blank" class="bg-[#25D366] text-white px-8 py-4 rounded-full text-xl font-black hover:scale-105 transition transform flex items-center gap-3 shadow-lg">
+                    דברו איתנו בווטסאפ
+                    <svg class="w-6 h-6 fill-current" viewBox="0 0 24 24"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.463 1.065 2.875 1.213 3.074.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/></svg>
+                </a>
+            </div>
+        </div>
+        <div class="text-center mt-20 border-t border-gray-800 pt-8 opacity-40 text-sm">
+            © 2026 הבית השני - פנסיון בוטיק בתל אביב.
+        </div>
+    </footer>
+
+</body>
+</html>
